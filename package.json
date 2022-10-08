@@ -1,0 +1,26 @@
+{
+  "name": "election-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LfMourao/election-serverless.git"
+  },
+  "author": "Luís Fernando Mourão/Luís Fernando Mascarenhas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LfMourao/election-serverless/issues"
+  },
+  "homepage": "https://github.com/LfMourao/election-serverless#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "load-json-file": "^7.0.1",
+    "lodash.round": "^4.0.4",
+    "write-json-file": "^5.0.0"
+  }
+}

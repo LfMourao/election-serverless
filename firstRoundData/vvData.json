@@ -1,0 +1,198 @@
+{
+	"br": {
+		"uf": "BR",
+		"vv": 118229719,
+		"pvv": 1,
+		"pvvc": 95.59,
+		"name": "Brasil"
+	},
+	"ac": {
+		"uf": "AC",
+		"vv": 440917,
+		"pvv": 0.00373,
+		"pvvc": 96.71,
+		"name": "Acre"
+	},
+	"al": {
+		"uf": "AL",
+		"vv": 1724217,
+		"pvv": 0.01458,
+		"pvvc": 95.47,
+		"name": "Alagoas"
+	},
+	"ap": {
+		"uf": "AP",
+		"vv": 432161,
+		"pvv": 0.00366,
+		"pvvc": 97.59,
+		"name": "Amapá"
+	},
+	"am": {
+		"uf": "AM",
+		"vv": 2056676,
+		"pvv": 0.0174,
+		"pvvc": 97.3,
+		"name": "Amazonas"
+	},
+	"ba": {
+		"uf": "BA",
+		"vv": 8423008,
+		"pvv": 0.07124,
+		"pvvc": 94.91,
+		"name": "Bahia"
+	},
+	"ce": {
+		"uf": "CE",
+		"vv": 5429264,
+		"pvv": 0.04592,
+		"pvvc": 96.46,
+		"name": "Ceará"
+	},
+	"df": {
+		"uf": "DF",
+		"vv": 1762575,
+		"pvv": 0.01491,
+		"pvvc": 96.85,
+		"name": "Distrito Federal"
+	},
+	"es": {
+		"uf": "ES",
+		"vv": 2221130,
+		"pvv": 0.01879,
+		"pvvc": 95.91,
+		"name": "Espírito Santo"
+	},
+	"go": {
+		"uf": "GO",
+		"vv": 3681469,
+		"pvv": 0.03114,
+		"pvvc": 96.56,
+		"name": "Goiás"
+	},
+	"ma": {
+		"uf": "MA",
+		"vv": 3781645,
+		"pvv": 0.03199,
+		"pvvc": 96.46,
+		"name": "Maranhão"
+	},
+	"mt": {
+		"uf": "MT",
+		"vv": 1842888,
+		"pvv": 0.01559,
+		"pvvc": 97.39,
+		"name": "Mato Grosso"
+	},
+	"ms": {
+		"uf": "MS",
+		"vv": 1506989,
+		"pvv": 0.01275,
+		"pvvc": 96.9,
+		"name": "Mato Grosso do Sul"
+	},
+	"mg": {
+		"uf": "MG",
+		"vv": 12016633,
+		"pvv": 0.10164,
+		"pvvc": 94.95,
+		"name": "Minas Gerais"
+	},
+	"pa": {
+		"uf": "PA",
+		"vv": 4679936,
+		"pvv": 0.03958,
+		"pvvc": 97.72,
+		"name": "Pará"
+	},
+	"pb": {
+		"uf": "PB",
+		"vv": 2421688,
+		"pvv": 0.02048,
+		"pvvc": 94.69,
+		"name": "Paraíba"
+	},
+	"pr": {
+		"uf": "PR",
+		"vv": 6566764,
+		"pvv": 0.05554,
+		"pvvc": 96.17,
+		"name": "Paraná"
+	},
+	"pe": {
+		"uf": "PE",
+		"vv": 5452009,
+		"pvv": 0.04611,
+		"pvvc": 95.01,
+		"name": "Pernambuco"
+	},
+	"pi": {
+		"uf": "PI",
+		"vv": 2044386,
+		"pvv": 0.01729,
+		"pvvc": 96.63,
+		"name": "Piauí"
+	},
+	"rj": {
+		"uf": "RJ",
+		"vv": 9456677,
+		"pvv": 0.07999,
+		"pvvc": 95.43,
+		"name": "Rio de Janeiro"
+	},
+	"rn": {
+		"uf": "RN",
+		"vv": 2007264,
+		"pvv": 0.01698,
+		"pvvc": 96.01,
+		"name": "Rio Grande do Norte"
+	},
+	"rs": {
+		"uf": "RS",
+		"vv": 6637752,
+		"pvv": 0.05614,
+		"pvvc": 96.34,
+		"name": "Rio Grande do Sul"
+	},
+	"ro": {
+		"uf": "RO",
+		"vv": 903235,
+		"pvv": 0.00764,
+		"pvvc": 97.45,
+		"name": "Rondônia"
+	},
+	"rr": {
+		"uf": "RR",
+		"vv": 298369,
+		"pvv": 0.00252,
+		"pvvc": 97.7,
+		"name": "Roraima"
+	},
+	"sc": {
+		"uf": "SC",
+		"vv": 4330984,
+		"pvv": 0.03663,
+		"pvvc": 96.51,
+		"name": "Santa Catarina"
+	},
+	"sp": {
+		"uf": "SP",
+		"vv": 25656334,
+		"pvv": 0.217,
+		"pvvc": 94.36,
+		"name": "São Paulo"
+	},
+	"se": {
+		"uf": "SE",
+		"vv": 1298432,
+		"pvv": 0.01098,
+		"pvvc": 95.14,
+		"name": "Sergipe"
+	},
+	"to": {
+		"uf": "TO",
+		"vv": 861792,
+		"pvv": 0.00729,
+		"pvvc": 96.67,
+		"name": "Tocantins"
+	}
+}
