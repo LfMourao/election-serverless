@@ -1,0 +1,19 @@
+service: election-serverless
+frameworkVersion: "3"
+
+useDotenv: true
+
+plugins:
+  - serverless-bundle
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  profile: election
+  region: us-east-2
+  versionFunctions: false
+  timeout: 15
+
+functions:
+  electionIntegration:
+    handler: handler.electionIntegration
