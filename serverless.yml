@@ -3,8 +3,8 @@ frameworkVersion: "3"
 
 useDotenv: true
 
-plugins:
-  - serverless-bundle
+# plugins:
+#   - serverless-bundle
 
 provider:
   name: aws

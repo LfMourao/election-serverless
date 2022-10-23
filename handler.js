@@ -1,23 +1,29 @@
-//import axios from "axios";
 //import { writeJsonFile } from "write-json-file";
 //import { UFS } from "./utils/ufs";
-import AWS from "aws-sdk";
-import appSyncMutation from "./appSyncMutation";
-import "isomorphic-fetch";
+('use strict');
+const axios = require('axios')
+const AWS = require("aws-sdk");
+const { appSyncMutation } = require('./appSyncMutation.js');
+require('isomorphic-fetch');
 AWS.config.update({ region: "us-east-2" });
 
-export async function electionIntegration(event) {
+module.exports.electionIntegration = async (event) => {
   //serverless invoke local -f electionIntegration -p events/test.json
+
+  const UFS = [{ nome: "Brasil", sigla: "BR" }, { nome: "Rio de Janeiro", sigla: "RJ" }]
+  // , { nome: "Rio de Janeiro", sigla: "RJ" }, { nome: "São Paulo", sigla: "SP" }
 
   let promises = [];
   var output = [];
+  output = event
 
   // for (var i = 0; i < UFS.length; i++) {
   //   const uf = UFS[i].sigla.toLowerCase();
 
   //   var config = {
   //     method: "get",
-  //     url: `https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/${uf}/${uf}-c0001-e000544-r.json`,
+  //     //     url: `https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/${uf}/${uf}-c0001-e000544-r.json`,
+  //     url: `https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/${uf}/${uf}-c0001-e000545-r.json`,
   //     headers: {},
   //   };
 
@@ -36,7 +42,13 @@ export async function electionIntegration(event) {
   //   );
   // }
 
-  const appSync = await appSyncMutation();
+  var appSync
+
+  for (var i = 0; i < output.length; i++) {
+    appSync = await appSyncMutation(output[i]);
+  }
+
+  //const appSync = await appSyncMutation();
 
   return Promise.all(promises).then(() => ({
     message: "Go Serverless v3! Your function executed successfully!",
