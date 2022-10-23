@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/LfMourao/election-serverless#readme",
   "dependencies": {
+    "aws-appsync": "^4.1.8",
+    "aws-sdk": "^2.1238.0",
     "axios": "^1.1.2",
+    "graphql-tag": "^2.12.6",
+    "isomorphic-fetch": "^3.0.0",
     "load-json-file": "^7.0.1",
     "lodash.round": "^4.0.4",
     "write-json-file": "^5.0.0"
