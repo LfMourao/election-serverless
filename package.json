@@ -24,6 +24,7 @@
     "isomorphic-fetch": "^3.0.0",
     "load-json-file": "^7.0.1",
     "lodash.round": "^4.0.4",
+    "moment": "^2.29.4",
     "write-json-file": "^5.0.0"
   },
   "devDependencies": {

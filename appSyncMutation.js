@@ -1,5 +1,6 @@
 const gql = require('graphql-tag');
 const AWSAppSyncClient = require('aws-appsync').default;
+const m = require('moment');
 
 async function appSyncMutation(output) {
   const client = new AWSAppSyncClient({
@@ -13,17 +14,31 @@ async function appSyncMutation(output) {
   });
 
   const uf = output.cdabr
+  const updateTime = m(output.dg + ' ' + output.hg, 'DD/MM/YYYY hh:mm:ss').toISOString()
+  const id = uf + '#' + updateTime
+
+  const bolsonaroData = output.cand.filter(eachCand => eachCand.n === '22')[0]
+  const lulaData = output.cand.filter(eachCand => eachCand.n === '13')[0]
+
+  const votesCount = parseInt(bolsonaroData.vap) + parseInt(lulaData.vap)
+
+  const bolsonaro = parseFloat(bolsonaroData.pvap)
+  const lula = parseFloat(lulaData.pvap)
+
+  votesProportion = parseFloat(output.psnt)
 
   const input = {
-    id: "BR#2022-10-23T13:30:51.531Z",
-    uf: "BR",
-    updateTime: "2022-10-23T13:30:51.531Z",
+    id,
+    uf,
+    updateTime,
     fetchTime: new Date().toISOString(),
-    votesCount: 1,
-    votesProportion: 0.01,
-    bolsonaro: 1,
-    lula: 0,
+    votesCount,
+    votesProportion,
+    bolsonaro,
+    lula,
   };
+
+  console.log('input', input)
 
   let mutationResponse
 
@@ -31,7 +46,7 @@ async function appSyncMutation(output) {
 
   if (!mutationResponse.err) return mutationResponse;
   else {
-    mutationResponse = await mutation("create", client, input, table);
+    mutationResponse = await mutation("create", client, input, "ElectionPartial");
     return mutationResponse;
   }
 }
@@ -62,7 +77,7 @@ async function mutation(action = "create", client, input, table = "ElectionParti
       variables: { input },
     });
   } catch (e) {
-    console.log("error", e);
+    //console.log("error", e);
     res = { err: e, input };
   }
 
