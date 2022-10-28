@@ -1,21 +1,24 @@
 //import { writeJsonFile } from "write-json-file";
 //import { UFS } from "./utils/ufs";
-('use strict');
-const axios = require('axios')
+("use strict");
+const axios = require("axios");
 const AWS = require("aws-sdk");
-const { appSyncMutation } = require('./appSyncMutation.js');
-require('isomorphic-fetch');
+const { appSyncMutation } = require("./appSyncMutation.js");
+require("isomorphic-fetch");
 AWS.config.update({ region: "us-east-2" });
 
 module.exports.electionIntegration = async (event) => {
-  //serverless invoke local -f electionIntegration -p events/test.json
+  //serverless invoke local -f electionIntegration -p events/essentials.json
 
-  const UFS = [{ nome: "Brasil", sigla: "BR" }, { nome: "Rio de Janeiro", sigla: "RJ" }]
+  const UFS = [
+    { nome: "Brasil", sigla: "BR" },
+    { nome: "Rio de Janeiro", sigla: "RJ" },
+  ];
   // , { nome: "Rio de Janeiro", sigla: "RJ" }, { nome: "São Paulo", sigla: "SP" }
 
   let promises = [];
   var output = [];
-  output = event
+  output = event;
 
   // for (var i = 0; i < UFS.length; i++) {
   //   const uf = UFS[i].sigla.toLowerCase();
@@ -42,7 +45,7 @@ module.exports.electionIntegration = async (event) => {
   //   );
   // }
 
-  var appSync
+  var appSync;
 
   for (var i = 0; i < output.length; i++) {
     appSync = await appSyncMutation(output[i]);
@@ -56,4 +59,4 @@ module.exports.electionIntegration = async (event) => {
     size: output.length,
     appSync,
   }));
-}
+};
