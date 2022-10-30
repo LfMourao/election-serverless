@@ -1,4 +1,4 @@
-export const UFS = [
+const UFS = [
   { nome: "Brasil", sigla: "BR" },
   { nome: "Acre", sigla: "AC" },
   { nome: "Alagoas", sigla: "AL" },
@@ -28,3 +28,7 @@ export const UFS = [
   { nome: "Sergipe", sigla: "SE" },
   { nome: "Tocantins", sigla: "TO" },
 ];
+
+module.exports = {
+  UFS,
+};

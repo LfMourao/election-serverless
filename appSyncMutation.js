@@ -4,28 +4,30 @@ const m = require("moment");
 
 async function appSyncMutation(output) {
   const client = new AWSAppSyncClient({
-    url: "https://vqplhbs6hzgqxgf27fqreaujwm.appsync-api.us-east-2.amazonaws.com/graphql",
+    url: "https://k4m3clv7nrbltpiyclcl66od4m.appsync-api.us-east-2.amazonaws.com/graphql",
     region: "us-east-2",
     auth: {
       type: "API_KEY",
-      apiKey: "da2-j32lvdltpjhdzltk7wxqwmblqm",
+      apiKey: "da2-wqocl7zrhbfv7fpr4l54dtft2u",
     },
     disableOffline: true,
   });
 
-  const uf = output.cdabr;
+  const uf = output.cdabr.toUpperCase();
   const updateTime = m(output.dg + " " + output.hg, "DD/MM/YYYY hh:mm:ss").toISOString();
   const id = uf + "#" + updateTime;
 
-  const bolsonaroData = output.cand.filter((eachCand) => eachCand.n === "22")[0];
-  const lulaData = output.cand.filter((eachCand) => eachCand.n === "13")[0];
+  const bolsonaroData = output.cand.find((eachCand) => eachCand.n === "22");
+  const lulaData = output.cand.find((eachCand) => eachCand.n === "13");
+
+  console.log({ bolsonaroData, lulaData });
 
   const votesCount = parseInt(bolsonaroData.vap) + parseInt(lulaData.vap);
 
-  const bolsonaro = parseFloat(bolsonaroData.pvap);
-  const lula = parseFloat(lulaData.pvap);
+  const bolsonaro = parseFloat(bolsonaroData.pvap) / 100;
+  const lula = parseFloat(lulaData.pvap) / 100;
 
-  votesProportion = parseFloat(output.psnt);
+  votesProportion = parseFloat(output.psi) / 100;
 
   const input = {
     id,
